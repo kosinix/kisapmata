@@ -6,9 +6,17 @@
   "scripts": {
     "test": "node test/test.js"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosinix/kisapmata.git"
+  },
+  "keywords": ["flash", "philippines", "pilipinas"],
   "author": "Nico Amarilla",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kosinix/kisapmata/issues"
+  },
+  "homepage": "https://github.com/kosinix/kisapmata#readme",
   "dependencies": {
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2"
