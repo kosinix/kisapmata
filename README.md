@@ -1,4 +1,6 @@
 # kisapmata
+[![npm version](https://badge.fury.io/js/kisapmata.svg)](https://badge.fury.io/js/kisapmata)
+
 *"o kay bilis naman maglaho"*
 
 ## Install
