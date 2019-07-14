@@ -1,15 +1,17 @@
 //// Core modules
 
 //// External modules
-let lodash = require('lodash');
+let lodashGet = require('lodash.get');
+let lodashSet = require('lodash.set');
+
 
 let flash = {
-    set: (req, id, message, path = `session.flash.${id}`) => {
-        lodash.set(req, path, message);
+    set: (req, id, message) => {
+        lodashSet(req, 'session.flash.' + id, message);
     },
-    get: (req, id, path = `session.flash.${id}`) => {
-        let r = lodash.get(req, path, '');
-        lodash.set(req, path, ''); // Erase content
+    get: (req, id) => {
+        let r = lodashGet(req, 'session.flash.' + id, '');
+        lodashSet(req, 'session.flash.' + id, '');
         return r;
     }
 }
