@@ -4,15 +4,15 @@
 let lodashGet = require('lodash.get');
 let lodashSet = require('lodash.set');
 
-
-let flashSet = (req, id, message) => {
-    lodashSet(req, 'session.flash.' + id, message);
+let flashSet = (req, id, message, path = 'session.flash.${id}') => {
+    lodashSet(req, path.replace('${id}', id), message);
 }
 let flash = {
     set: flashSet,
-    get: (req, id) => {
-        let r = lodashGet(req, 'session.flash.' + id, '');
-        lodashSet(req, 'session.flash.' + id, '');
+    get: (req, id, path = 'session.flash.${id}') => {
+        path = path.replace('${id}', id)
+        let r = lodashGet(req, path, '');
+        lodashSet(req, path, '');
         return r;
     },
     error: (req, id, message) => {
