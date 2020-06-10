@@ -1,6 +1,6 @@
 {
   "name": "kisapmata",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Flash messaging. Minimal dependencies.",
   "main": "index.js",
   "scripts": {
