@@ -1,8 +1,8 @@
 //// Core modules
 
 //// External modules
-let lodashGet = require('lodash.get');
-let lodashSet = require('lodash.set');
+let lodashGet = require('lodash').get
+let lodashSet = require('lodash').set
 
 let flashSet = (req, id, message, path = 'session.flash.${id}') => {
     lodashSet(req, path.replace('${id}', id), message);
